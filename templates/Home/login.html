@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login Page</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f8;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .login-box {
+            background: white;
+            padding: 30px 40px;
+            width: 320px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #2c3e50;
+        }
+
+        label {
+            font-weight: bold;
+            font-size: 14px;
+        }
+
+        select, input {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #2c3e50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 15px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #1a252f;
+        }
+
+        .error {
+            color: red;
+            text-align: center;
+            margin-top: 10px;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="login-box">
+        <h2>Login Page</h2>
+
+        <form onsubmit="redirectPage(event)">
+            
+            <label>User Role</label>
+            <select id="role" required>
+                <option value="">Select Role</option>
+                <option value="student">Student</option>
+                <option value="faculty">Faculty</option>
+                <option value="hod">HOD</option>
+                <option value="registrar">Registrar Office</option>
+                <option value="finance">Financial Office</option>
+            </select>
+
+            <label>Username</label>
+            <input type="text" id="username" required>
+
+            <label>Password</label>
+            <input type="password" id="password" required>
+
+            <button type="submit">Login</button>
+
+        </form>
+        
+        <div id="errorMsg" class="error"></div>
+    </div>
+
+<script>
+function redirectPage(event) {
+    event.preventDefault();
+    
+    var role = document.getElementById("role").value;
+    var username = document.getElementById("username").value;
+    var password = document.getElementById("password").value;
+    var errorDiv = document.getElementById("errorMsg");
+    
+    // Simple validation
+    if (!username || !password) {
+        errorDiv.innerText = "Username and Password required!";
+        return;
+    }
+    
+    // Redirect based on role
+    if(role === "student"){
+        window.location.href = "/student/student_dashboard";
+    }
+    else if(role === "faculty"){
+        window.location.href = "/faculty/faculty_dashboard";
+    }
+    else if(role === "hod"){
+        window.location.href = "/hod/dashboard";
+    }
+    else if(role === "registrar"){
+        window.location.href = "/registrar/dashboard";
+    }
+    else if(role === "finance"){
+        window.location.href = "/finance/dashboard";
+    }
+    else {
+        errorDiv.innerText = "Please select a role!";
+    }
+}
+</script>
+
+</body>
+</html>
