@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>HOD Dashboard</title>
+
+<style>
+
+body{
+margin:0;
+font-family:Arial, Helvetica, sans-serif;
+background:#f2f4f7;
+}
+
+.navbar{
+background:#2c3e50;
+padding:15px;
+color:white;
+}
+
+.navbar a{
+color:white;
+margin-right:20px;
+text-decoration:none;
+font-weight:bold;
+}
+
+.container{
+display:flex;
+}
+
+.sidebar{
+width:230px;
+background:#ecf0f1;
+padding:20px;
+height:100vh;
+}
+
+.profile{
+text-align:center;
+}
+
+.profile img{
+width:80px;
+height:80px;
+border-radius:50%;
+}
+
+.profile h3{
+margin:10px 0;
+}
+
+.main{
+flex:1;
+padding:25px;
+}
+
+.card{
+background:white;
+padding:20px;
+margin-bottom:20px;
+border-radius:8px;
+box-shadow:0px 2px 5px rgba(0,0,0,0.2);
+}
+
+.card h2{
+margin-top:0;
+}
+
+button{
+padding:8px 15px;
+background:#3498db;
+border:none;
+color:white;
+border-radius:5px;
+cursor:pointer;
+}
+
+button:hover{
+background:#2980b9;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="navbar">
+<a href="#">Faculty</a>
+<a href="#">Subjects</a>
+<a href="#">Department Report</a>
+<a href="#">Logout</a>
+</div>
+
+<div class="container">
+
+<div class="sidebar">
+
+<div class="profile">
+<img src="https://via.placeholder.com/80">
+<h3>HOD Name</h3>
+<p>Department: Computer</p>
+<p>Email: hod@college.com</p>
+</div>
+
+</div>
+
+<div class="main">
+
+<div class="card">
+<h2>View Faculty Details</h2>
+<button>Open</button>
+</div>
+
+<div class="card">
+<h2>Assign Subjects</h2>
+<button>Open</button>
+</div>
+
+<div class="card">
+<h2>Department Report</h2>
+<button>Open</button>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</body>
+</html>

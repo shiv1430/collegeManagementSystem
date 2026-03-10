@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Financial Office Dashboard</title>
+
+<style>
+
+body{
+margin:0;
+font-family:Arial, Helvetica, sans-serif;
+background:#f2f4f7;
+}
+
+.navbar{
+background:#2c3e50;
+padding:15px;
+}
+
+.navbar a{
+color:white;
+margin-right:20px;
+text-decoration:none;
+font-weight:bold;
+}
+
+.container{
+display:flex;
+}
+
+.sidebar{
+width:220px;
+background:#ecf0f1;
+padding:20px;
+height:100vh;
+}
+
+.sidebar h3{
+margin-top:0;
+}
+
+.sidebar p{
+font-size:14px;
+margin:8px 0;
+}
+
+.main{
+flex:1;
+padding:25px;
+}
+
+.card{
+background:white;
+padding:20px;
+margin-bottom:20px;
+border-radius:8px;
+box-shadow:0px 2px 5px rgba(0,0,0,0.2);
+}
+
+.card h2{
+margin-top:0;
+}
+
+button{
+padding:8px 15px;
+background:#3498db;
+border:none;
+color:white;
+border-radius:5px;
+cursor:pointer;
+}
+
+button:hover{
+background:#2980b9;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="navbar">
+<a href="#">Add Fee</a>
+<a href="#">Update Payment</a>
+<a href="#">Generate Receipt</a>
+<a href="#">Reports</a>
+<a href="#">Logout</a>
+</div>
+
+<div class="container">
+
+<div class="sidebar">
+<h3>Financial Office</h3>
+
+<p><strong>Fee Management</strong></p>
+<p>Payment Tracking</p>
+<p>Financial Reports</p>
+
+</div>
+
+<div class="main">
+
+<div class="card">
+<h2>Add Fee Details</h2>
+<p>Add student fee structure and details.</p>
+<button>Add Fee</button>
+</div>
+
+<div class="card">
+<h2>Update Payment Status</h2>
+<p>Update paid or pending fee status.</p>
+<button>Update Payment</button>
+</div>
+
+<div class="card">
+<h2>Generate Fee Receipt</h2>
+<p>Generate printable fee receipt.</p>
+<button>Generate</button>
+</div>
+
+<div class="card">
+<h2>View Fee Reports</h2>
+<p>View monthly or yearly fee reports.</p>
+<button>View Reports</button>
+</div>
+
+</div>
+
+</div>
+
+</body>
+</html>
